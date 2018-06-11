@@ -19,5 +19,6 @@ class LandmarksController < ApplicationController
 
   post'/landmarks/:id' do
     @landmark = Landmark.find_by(params[:id])
+    @landmark.update(params[:landmark])
   end
 end
